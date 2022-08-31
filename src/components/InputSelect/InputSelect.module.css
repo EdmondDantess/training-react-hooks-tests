@@ -1,0 +1,29 @@
+h3 {
+    margin-top: 5%;
+    margin-left: 40%;
+    border: 1px solid black;
+    width: 100px;
+ }
+h3:hover {
+    cursor: pointer;
+    background-color: #1ea7fd;
+}
+
+.item {
+     margin-left: 40%;
+    border: 1px solid black;
+    width: 100px;
+}
+
+.item:hover {
+    background-color: #1ea7fd;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.selected {
+    background-color: #1ea7fd;
+    margin-left: 40%;
+    border: 1px solid black;
+    width: 100px;
+}

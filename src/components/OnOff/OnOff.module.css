@@ -1,0 +1,49 @@
+.buttonOn {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    width: 200px;
+    margin-top: 5px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.buttonOff {
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    width: 200px;
+    margin-top: 5px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.on {
+    border: 5px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+.off {
+    border: 5px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+.lampa {
+    width: 50px;
+    border-radius: 100%;
+    border: 5px solid black;
+    background-color: green;
+}
+
+.buttonOff .lampa {
+    width: 50px;
+    border-radius: 100%;
+    border: 5px solid black;
+    background-color: rgb(243, 7, 7);
+}
+
+.buttonOn .on {
+    background-color: rgb(34, 243, 7);
+}
+
+.buttonOff .off {
+    background-color: red;
+}
