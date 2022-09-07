@@ -5,13 +5,13 @@
     justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
-    background: #091921;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .clock{
+    margin-top: 23px;
     width: 350px;
     height: 350px;
     display: flex;

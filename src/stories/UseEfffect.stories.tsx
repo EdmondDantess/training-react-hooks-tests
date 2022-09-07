@@ -1,6 +1,4 @@
 import React, {ChangeEvent, HTMLInputTypeAttribute, useEffect, useRef, useState} from 'react';
-import {ComponentStory, ComponentMeta} from '@storybook/react';
-import {action} from '@storybook/addon-actions';
 
 
 export default {
@@ -22,7 +20,7 @@ export const Example1 = () => {
     useEffect(() => {
         console.log('I render once')
         setInterval(() => {
-            setCounter((start) => start - 1)
+            setCounter((start) => start + 1)
         }, 1000)
         setInterval(() => {
             setTime(new Date())
@@ -37,4 +35,20 @@ export const Example1 = () => {
         {counter}
         <div>{time.toLocaleTimeString()}</div>
     </>
+}
+
+export const KeyTrackerExapmle = () => {
+    const [text, setText] = useState('')
+    console.log('Component KeyTracker Rendered ' + text)
+    useEffect(() => {
+        const handlerPress = (e: KeyboardEvent) => {
+            console.log(e.key)
+              setText( text + e.key)
+        }
+        window.addEventListener('keypress', handlerPress)
+        return () => {
+            window.removeEventListener('keypress', handlerPress)
+        }
+    }, [text])
+    return <div>Pressed keys: {text}</div>
 }

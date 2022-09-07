@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import style from './Clock.module.css'
 import DigitalClock from './DigitalClock';
 import {AnalogClock} from './AnalogClock';
@@ -13,9 +13,8 @@ export const Clock: React.FC<ClockPropsType> = (props) => {
 
     return (
         <div className={style.clockBody}>
-            {analogMode ?    <AnalogClock date={date} setDate={setDate}/> :  <DigitalClock date={date} setDate={setDate}/>  }
+            {analogMode ? <AnalogClock date={date} setDate={setDate}/> : <DigitalClock date={date} setDate={setDate}/>}
             <button className={style.ButtonClock} onClick={() => setAnalogMode(!analogMode)}>Change Mode</button>
-
         </div>
     );
 };

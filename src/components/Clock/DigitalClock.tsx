@@ -15,6 +15,7 @@ const DigitalClock: React.FC<DigitalClockPropsType> = ({date, setDate}) => {
     useEffect(() => {
         const id = setInterval(() => {
             setDate(new Date())
+            console.log('im digital clock')
         }, 1000)
 
         return () => {

@@ -7,7 +7,6 @@ export type AnalogClockPropsType = {
     setDate: (Date: Date) => void
 }
 
-
 export const AnalogClock: React.FC<AnalogClockPropsType> = ({date, setDate}) => {
 
     const deg = 6;
@@ -27,10 +26,10 @@ export const AnalogClock: React.FC<AnalogClockPropsType> = ({date, setDate}) => 
             setHrStyle(`rotateZ(${(hh) + (mm / 12)}deg)`)
             setMnStyle(`rotateZ(${mm}deg)`)
             setScStyle(`rotateZ(${ss}deg)`)
-
+            console.log('im analog clock')
         }, 1000)
         return () => clearInterval(id)
-    }, [hrStyle, mnStyle, scStyle])
+    }, [scStyle])
 
 
     return (
